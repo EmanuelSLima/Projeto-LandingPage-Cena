@@ -1,0 +1,200 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+/*Classes auxiliares*/
+.container{
+    margin: 0 auto;
+    padding: 0;
+    max-width: 960px;
+    width: 100%;
+}
+.clear{clear: both;}
+
+/*Classe cabecalho*/
+.cabecalho{
+    background-color: rgba(180, 180, 180, 1);
+    padding: 10px 2% 30px 2%;
+}
+.cabecalho .logo-1{
+    float: left;
+}
+.logo-1 img{
+    width: 145px;
+    margin-top: 18px;
+    vertical-align: middle;
+}
+.cabecalho .logo-2{
+    float: right;
+}
+.logo-2 img{
+    width: 145px;
+    margin-top: 12px;
+}
+
+/*Classe cover-form*/
+.cover-form{
+    width: 100%;
+}
+.bg{
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../img/bg-form.jpg');
+}
+
+/*Classe form-container*/
+.form-container{
+    float: right;
+    margin-right: 35px;
+    width: 360px;
+    height: 110%;
+    background: rgba(255, 255, 255, 0.7);
+    position: relative;
+    top: -5%;
+    box-shadow: 1px 1px 1px 1px #ccc;
+}
+.form-container h2{
+    font-weight: normal;
+    padding: 25px 15px;
+    font-size: 17px;
+    color: black;
+    background-color: rgba(220, 220, 220, 0.664);
+}
+.form-container form{
+    margin-top: 10px;
+    padding: 10px 35px;
+}
+form input[type=text], input[type=email], input[type=tel]{
+    width: 100%;
+    border: 1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+form input[type=submit]{
+    background-color: #033c50;
+    border: none;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+}
+form label{
+    color: #525252;
+    font-size: 14px;
+}
+.form-wrap{
+    margin-bottom: 30px;
+}
+.form-wrap > p{
+    color: rgb(105, 105, 105);
+}
+
+/*Classe chamada*/
+.chamada{
+    text-align: center;
+}
+.chamada h2{
+    text-align: center;
+    display: inline-block;
+    color: white;
+    max-width: 600px;
+    font-size: 26px;
+    font-weight: normal;
+    width: 96%;
+}
+.chamada p{
+    text-align: center;
+    display: inline-block;
+    color: white;
+    max-width: 600px;
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: normal;
+    width: 96%;
+}
+.chamada > .container{
+    background-color: #29526d;
+    padding: 10px 0 35px 0;
+}
+
+/*Classe mosaico*/
+.flex-mosaico{
+    display: flex;
+}
+.item-1{
+    background-position: center;
+    background-size: cover;
+    background-image: url('../img/mosaico1.jpg');
+    width: 60%;
+}
+.item-2{
+    width: 40%;
+    padding: 30px 20px;
+    background-color: #40a4d9;
+    color: white;
+    height: 350px;
+}
+/*Classe ponto divisor*/
+.ponto-divisor{
+    width: 62px;
+    height: 62px;
+    position: relative;
+    top: 500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Classe rodape*/
+.rodape{
+    text-align: center;
+    padding: 20px 0;
+}
+.rodape img{
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+/*Formatação para dispositivos mobiles*/
+@media screen and (min-width: 0) and (max-width: 768px){
+    .logo-1, .logo-2{
+        width: 100%;
+        text-align: center;
+        margin: 15px 0 15px 0;
+    }
+    .form-container{
+        top: -250px;
+        left: -50%;
+        transform: translate(50%, 50%);
+        width: 350px;
+        height: 100%;
+        margin-right: 0;
+    }
+    .flex-mosaico{
+        display: block;
+    }
+    .item-1{
+        width: 100%;
+        padding-top: 80%;
+    }
+    .item-2{
+        width: 100%;
+        text-align: center;
+    }
+    .ponto-divisor{
+        display: none;
+    }
+    .chamada h2{
+        font-size: 22px;
+        margin-top: 20px;
+    }
+}
